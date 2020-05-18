@@ -1,0 +1,14 @@
+{:objects
+  {:Example
+  {:description "Example schema"
+   :fields
+   {:id {:type (non-null ID)}
+    :example {:type (non-null String)}}}}
+
+ :queries
+ {:example_by_id
+  {:type :Example
+   :description "Select a Example by its unique id, if it exists."
+   :args
+   {:id {:type (non-null ID)}}
+   :resolve :query/example-by-id}}}
